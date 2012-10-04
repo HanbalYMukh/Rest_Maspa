@@ -1,0 +1,180 @@
+body {
+	margin:0 auto;
+	padding:0;
+	width:100%;
+	color:#333;
+	font-family: "Lucida Grande",Verdana,sans-serif;
+	border:1px solid #333;
+	background-color:#EEEEEE;
+}
+html, .main {
+	padding:0;
+	margin:0;
+}
+.clear {
+	clear:both;
+	padding:0;
+	margin:0;
+	width:100%;
+	font-size:0;
+	line-height:0;
+}
+
+/* LAYOUT */
+.space{
+	height:20px;
+	width:100%;
+}
+#menu-head-wrapp{
+	height:40px;
+	width:76%;
+	background:url(../image/over.png) repeat-x;
+	background-color: rgba(5,85,105,.700);
+	margin: 0 auto;
+	-moz-border-top-right-radius: 0.5em;
+	border-top-right-radius: 0.5em;
+	-webkit-border-top-right-radius: 0.5em;
+	-moz-border-top-left-radius: 0.5em;
+	border-top-left-radius: 0.5em;
+	-webkit-border-top-left-radius: 0.5em;
+	/*Shadow*/
+	box-shadow: 0px -1px 5px #bdbcb0;
+	-webkit-box-shadow: 0px -1px 5px #bdbcb0;
+	moz-box-shadow: 0px -1px 5px #bdbcb0;
+	
+}
+#menu-head-wrapp p{
+	text-align:left;
+	text-transform:Uppercase;
+	color:#FFFFFF;
+	font-family:gentilis;
+	padding-left:25px;
+	padding-top:8px;
+}
+#menu-wrapp{
+	height:180px;
+	width:76%;
+	background-color: rgba(132,240,254,.10);
+	margin: 0 auto;
+	-moz-border-bottom-right-radius: 0.5em;
+	border-bottom-right-radius: 0.5em;
+	-webkit-border-bottom-right-radius: 0.5em;
+	-moz-border-bottom-left-radius: 0.5em;
+	border-bottom-left-radius: 0.5em;
+	-webkit-border-bottom-left-radius: 0.5em;
+	/*Shadow*/
+	box-shadow: 0px 1px 4px #bdbcb0;
+	-webkit-box-shadow: 0px 1px 4px #bdbcb0;
+	moz-box-shadow: 0px 1px 4px #bdbcb0;
+
+}
+#menu{
+	height:170px;
+	width:22%;
+	background:url(../image/menu-over.png) repeat-x;
+	background-color:rgba(233,252,155,.600);
+	margin: 4px 0px 4px 23px;
+	float:left;
+	-moz-border-radius:0.5em;
+	border-radius:0.5em;
+	-webkit-border-radius:0.5em;
+}
+#header{
+	height:48px;
+	background: url(../image/head.png) repeat-x;
+	border-bottom:1px solid #CACACA;
+	color:#fff;
+	
+}
+#logo{
+	width:45px;
+	height:45px;
+	background:url(../image/logob.png) no-repeat 0 0;
+	float:left;
+	position:relative;
+	margin:0 auto;
+	top:10px;
+}
+#logo:hover{
+	background:url(../image/logo.png) no-repeat 0 0;
+}
+#maspa {
+	width:120px;
+	height:45px;
+	float:left;
+	position:relative
+}
+
+#maspa h1 {
+	text-indent:-9999em;
+	height:40px
+}
+#head-container{
+width:77%;
+background:#cccccc;
+margin:0 auto;
+}
+#site-container{
+width: 100%;
+background-color:#FFF;
+margin: 0 auto;
+}
+#maspa a {
+	background:url(../image/maspab.png) no-repeat 0 0;
+	text-indent:-9999em;
+	width:120px;
+	height:45px;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:2;
+}
+#maspa a:hover{
+	background:url(../image/maspa.png) no-repeat 0 0;
+	text-indent:-9999em;
+	width:120px;
+	height:45px;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:2;
+}
+
+#content{
+	font-family:"gentilis",impact,helvetica;
+	font-size: 16px;
+	min-height:300px;
+	width:76%;
+	padding:20px 10px;
+	background: rgba(240,240,240,.0);
+	margin:0 auto;
+}
+#footer{
+	background-color:#333;
+	height:30px;
+	text-align:center;
+	width:100%;
+	color:#fff;
+	padding-top:10px;
+	font-size:12px;
+}
+
+/* ELEMENT */
+#header h2{
+	font-size:30px;
+	margin:0px;
+}
+#content a:link {
+	color: #0066cc;
+	text-decoration:none;
+}
+#content a:active,
+#content a:hover {
+	color: #59BAFF;
+}
+.title{
+	font-size:30px;
+	border-bottom:1px solid #333;
+	margin-bottom:15px;
+	font-family: "neue_sans_bold",Trebuchet,"Trebuchet MS",Helvetica,sans-serif;
+}
