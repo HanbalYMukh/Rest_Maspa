@@ -9,7 +9,7 @@
 	<link type="text/css" href="<?php echo base_url();?>asset/css/jquery.ui.all.css" rel="stylesheet" />
 	<script type="text/javascript" src="<?php echo base_url();?>asset/js/jquery-1.8.0.min.js"></script>
 	<script type="text/javascript" src="<?php echo base_url();?>asset/js/jquery-ui-1.8.23.custom.min.js"></script>
-	<link href="<?php echo base_url();?>asset/css/style.css" rel="stylesheet" type="text/css" />
+	<link href="<?php echo base_url();?>asset/css/main.css" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="<?php echo base_url();?>asset/css/demos.css">
 </head>
 <body>
