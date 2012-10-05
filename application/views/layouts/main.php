@@ -24,7 +24,7 @@
 		</div>
 	</div>
 	<div class="space"></div>
-	<div id="menu-head-wrapp"> <p>Menu Kelola Sistem</p> </div>
+	<div id="menu-head-wrapp"> <p>bukan manusia gagal jika mereka masih saja berusaha kecuali menyerah</p> </div>
 	<div id="content" class="typeface-js">
 	<?php echo form_open('home/login');?>
 

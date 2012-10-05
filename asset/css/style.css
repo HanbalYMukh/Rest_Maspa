@@ -52,7 +52,7 @@ html, .main {
 	padding-top:8px;
 }
 #menu-wrapp{
-	height:180px;
+	height:187px;
 	width:76%;
 	background-color: rgba(132,240,254,.10);
 	margin: 0 auto;
@@ -70,10 +70,10 @@ html, .main {
 }
 #menu{
 	height:170px;
-	width:22%;
+	width:24%;
 	background:url(../image/menu-over.png) repeat-x;
 	background-color:rgba(233,252,155,.600);
-	margin: 4px 0px 4px 23px;
+	margin: 8px 0px 8px 8px;
 	float:left;
 	-moz-border-radius:0.5em;
 	border-radius:0.5em;
