@@ -1,6 +1,6 @@
 <?php
 
-class Data_siswa extends CI_Controller {
+class Data_siswa extends MY_Controller {
 	
 	private $limit = 10;
 		

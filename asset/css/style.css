@@ -3,7 +3,7 @@ body {
 	padding:0;
 	width:100%;
 	color:#333;
-	font-family: "Lucida Grande",Verdana,sans-serif;
+	font-family: "gentilis",Verdana,sans-serif;
 	border:1px solid #333;
 	background-color:#EEEEEE;
 }
@@ -43,16 +43,15 @@ html, .main {
 	moz-box-shadow: 0px -1px 5px #bdbcb0;
 	
 }
-#menu-head-wrapp p{
-	text-align:left;
+#nama-menu p{
+	text-align:center;
 	text-transform:Uppercase;
 	color:#FFFFFF;
 	font-family:gentilis;
-	padding-left:25px;
-	padding-top:8px;
+	
 }
 #menu-wrapp{
-	height:187px;
+	height:150px;
 	width:76%;
 	background-color: rgba(132,240,254,.10);
 	margin: 0 auto;
@@ -69,8 +68,8 @@ html, .main {
 
 }
 #menu{
-	height:170px;
-	width:24%;
+	height:124px;
+	width:22.9%;
 	background:url(../image/menu-over.png) repeat-x;
 	background-color:rgba(233,252,155,.600);
 	margin: 8px 0px 8px 8px;
@@ -78,6 +77,13 @@ html, .main {
 	-moz-border-radius:0.5em;
 	border-radius:0.5em;
 	-webkit-border-radius:0.5em;
+	padding:5px;
+}
+#nama-menu{
+	width:25%;
+	height:30px;
+	float:left;
+	display: block;
 }
 #header{
 	height:48px;
@@ -97,6 +103,12 @@ html, .main {
 }
 #logo:hover{
 	background:url(../image/logo.png) no-repeat 0 0;
+}
+#right-head{
+	font-size:10px;
+	color:rgba(23,230,297,.700);
+	float:right;
+	padding-top:15px;
 }
 #maspa {
 	width:120px;
@@ -178,3 +190,38 @@ margin: 0 auto;
 	margin-bottom:15px;
 	font-family: "neue_sans_bold",Trebuchet,"Trebuchet MS",Helvetica,sans-serif;
 }
+/*Jquery menu*/
+.demoHeaders {
+		margin-top: 2em;
+	}
+	#dialog-link {
+		padding: .4em 1em .4em 20px;
+		text-decoration: none;
+		position: relative;
+	}
+	#dialog-link span.ui-icon {
+		margin: 0 5px 0 0;
+		position: absolute;
+		left: .2em;
+		top: 50%;
+		margin-top: -8px;
+	}
+	#icons {
+		margin-left: 20px;
+		padding: 0px;
+	}
+	#icons li {
+		margin: 5px;
+		position: relative;
+		padding: 4px 0;
+		cursor: pointer;
+		float: left;
+		list-style: none;
+	}
+	#icons li :hover {
+	 -webkit-transition: width 0.2s ease, background 0.2s ease; -moz-transition: width 0.2s ease, background 0.2s ease; -o-transition: width 0.2s ease, background 0.2s ease; transition: width 0.2s ease, background 0.2s ease; width:18px; height:18px;
+	}
+	#icons span.ui-icon {
+		float: left;
+		margin: 0 4px;
+	}

@@ -1,6 +1,6 @@
 <?php
 
-class Data_pendptk extends CI_Controller {
+class Data_pendptk extends MY_Controller {
 	
 	private $limit = 10;
 

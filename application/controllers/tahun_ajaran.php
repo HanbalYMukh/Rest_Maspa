@@ -1,6 +1,6 @@
 <?php
 
-	class tahun_ajaran extends CI_Controller{
+	class tahun_ajaran extends MY_Controller{
 		
 		private $limit=10;
 		

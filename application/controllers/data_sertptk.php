@@ -1,6 +1,6 @@
 <?php
 
-class Data_sertptk extends CI_Controller {
+class Data_sertptk extends MY_Controller {
 	
 	private $limit = 10;
 		

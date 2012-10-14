@@ -1,6 +1,6 @@
 <?php
 
-class Data_preguru extends CI_Controller {
+class Data_preguru extends MY_Controller {
 	
 	private $limit = 10;
 	

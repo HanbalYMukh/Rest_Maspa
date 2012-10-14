@@ -1,5 +1,5 @@
 <?
-class Data_sarana_kelas extends CI_Controller {
+class Data_sarana_kelas extends MY_Controller {
 	function Data_sarana_kelas(){
 	    parent::__construct();
 		$this->load->model('sarana_kelas_model');

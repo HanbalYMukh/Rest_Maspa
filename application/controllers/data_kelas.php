@@ -1,6 +1,6 @@
 <?php
 
-class Data_kelas extends CI_Controller {
+class Data_kelas extends MY_Controller {
 	
 	private $limit = 10;
 		

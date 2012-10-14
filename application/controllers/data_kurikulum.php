@@ -1,6 +1,6 @@
 <?php
 
-class Data_kurikulum extends CI_Controller {
+class Data_kurikulum extends MY_Controller {
 	
 	private $limit = 10;
 		

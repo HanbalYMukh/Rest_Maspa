@@ -1,6 +1,6 @@
 <?php
 
-class Data_pelptk extends CI_Controller {
+class Data_pelptk extends MY_Controller {
 	
 	private $limit = 10;
 	private $tbl = 'ptk_pelatihan';

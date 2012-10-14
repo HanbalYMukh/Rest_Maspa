@@ -3,7 +3,7 @@
 class Gt_content{
 
 	var $base_url;
-
+	
     function getHeader(){
 		$hasil='
 			<meta http-equiv="Content-Type" content="text/html; charset=utf-8">

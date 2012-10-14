@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Home extends CI_Controller
+class Home extends MY_Controller
 {
 	public function __construct()
 	{
@@ -14,15 +14,12 @@ class Home extends CI_Controller
 		}
 		else
 		{
-			// load model 'usermodel'
-			$this->load->model('usermodel');
+			
 			// level untuk user ini
-			$level = $this->session->userdata('level');
 			// ambil menu dari database sesuai dengan level
-			$data['menu'] = $this->usermodel->get_menu_for_level($level);
 			$this->template->set('title','Welcome user! | MyWebApplication.com');
 			// tampilkan halaman dashboard dengan data menu 
-			$this->template->build('admin/index',$data);
+			$this->template->build('admin/index');
 		}
 	}
 	public function manajemen_menu()
@@ -91,7 +88,7 @@ class Home extends CI_Controller
 			{
 				$this->template->set('title','Login Form | MyWebApplication.com');
 				$data['login_info'] = "Maaf, username dan password salah!";
-				$this->template->build('admin/login_form',$data);		
+				$this->load->view('layouts/main',$data);		
 			}
 		}
 	}

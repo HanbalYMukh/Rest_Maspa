@@ -1,6 +1,6 @@
 <?php
 
-class Data_ptk extends CI_Controller {
+class Data_ptk extends MY_Controller {
 	
 	private $limit = 10;
 	
