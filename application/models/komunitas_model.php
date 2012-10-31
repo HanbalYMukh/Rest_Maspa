@@ -17,7 +17,7 @@
 	
 	function selectCountdata()
 	{
-		$query = $this->db->query ("SELECT *, COUNT( kelas ) AS jml FROM komunitas_kelas GROUP BY kelas");
+		$query = $this->db->query ("SELECT a.*, b.*, COUNT( kelas ) AS jml FROM komunitas_kelas a, tkelas b GROUP BY kelas");
 		return $query->result();
 	}
 	
@@ -38,12 +38,18 @@
 	
 	function select($id)
 	{
-		return $this->db->get_where($this->tbl, array('id'=>$id))->row();
+		return $this->db->get_where($this->tbl, array('id'=>$id));
 	}
 	
-	function update($id)
+	function selectKelas($kelas)
 	{
-		$this->db->where('id', $id)->update($this->tbl, $_POST);
+		$query = $this->db->query ("SELECT a.* , b.no_induk , b.nama_siswa, c.* from komunitas_kelas a, siswa b, tkelas c WHERE a.siswa=b.no_induk AND a.kelas='$kelas' AND c.id_kelas='$kelas'");
+		return $query->result();
+	}
+	
+	function update($id,$kelas)
+	{
+		$this->db->where('id', $id)->update($this->tbl, 'kelas',$kelas);
 	}
 	
 	function search($key)

@@ -105,9 +105,14 @@ html, .main {
 #logo:hover{
 	background:url(../image/logob.png) no-repeat 0 0;
 }
+.right{
+float:right;
+
+padding-top:15px;
+}
 #right-head{
 	font-size:10px;
-	color:rgba(23,230,297,.700);
+	color:rgba(123,23,47,.700);
 	float:right;
 	padding-top:15px;
 }

@@ -8,7 +8,6 @@ function cari()
 }
 </script>
 
-<div id="conten">
 
 <div id="header_data" align="center">
 		<table width="100%" border="0" cellpadding="0" cellspacing="0" id="tbl_header">
@@ -26,7 +25,7 @@ function cari()
 
 
 <!-- grid -->
-<div id="data_tabel">
+
 <table width="90%" border="0" cellpadding="1" cellspacing="1" id="tbl_data" align="center">
 <td align="left" style="width:75%" ><img  src="<?=base_url()?>static/images/menu/add.png" align="absmiddle"/><?php echo anchor('data_kelas/addData', 'Tambah data'); ?></td>
 <td align="right" style="width:75%" >Jumlah Data : <b><?=$jumlah_data?></b></td>
@@ -65,8 +64,3 @@ function cari()
     <td align="right" style="width:75%" ><img  src="<?=base_url()?>static/images/menu/next.png" align="absmiddle"/><?php echo anchor('data_kelas/', 'Reload Data'); ?></td>
   </tr>
 </table>
-
-
-
-
-</div>

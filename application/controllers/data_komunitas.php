@@ -10,6 +10,7 @@ class Data_komunitas extends MY_Controller {
 		$this->load->helper(array('url','form'));
 		$this->load->library('form_validation');
 		$this->load->model('komunitas_model');
+		$this->load->model('kelas_model');
 	}
 	
 	function index()
@@ -40,27 +41,28 @@ class Data_komunitas extends MY_Controller {
 			$this->template->build('inc/kelas_add');
 		}else {
 			$this->komunitas_model->insert($_POST);
-			redirect('data_kelas/index');
+			redirect('data_komunitas/index');
 		}
 	}
 	
 	function deleteData($id)
 	{
 		$this->komunitas_model->delete($id);
-		redirect('data_kelas/index');
+		redirect('data_komunitas/index');
 	}
 	
-	function editData($id)
-	{
-		if($_POST==NULL)
-		{
-			$data['m'] = $this->komunitas_model->select($id);
-			$this->template->build('inc/kelas_edit', $data);
-		}else {
-			$this->komunitas_model->update($id);
-			redirect('data_kelas');
-		}
+	function naikKelas($kelas)
+	{	
 		
+		$data ['kelas']=$this->kelas_model->selectData();
+		$data['konten'] = $this->komunitas_model->selectKelas($kelas);
+		$this->template->build('inc/naik_kelas', $data);		
+	}
+	function naik(){
+		$kelas=trim($this->input->post('kelas'));
+		$id=trim($this->input->post('id'));
+		$data ['coba']= $kelas;
+		$this->template->build('inc/naik', $data);
 	}
 	
 	function searchData($key)

@@ -14,9 +14,9 @@
 		<?php foreach($fields as $m) : ?>
 		<tr class='tr_data' align='center'>
 			<td ><?php echo $i++; ?></td>
-			<td align='center'>&nbsp;<?= $m->kelas; ?></td>
+			<td align='center'>&nbsp;<?= $m->no_ruang; ?></td>
 			<td align='center'>&nbsp;<?= $m->jml; ?></td>
-		  <td align="center" width="190px"><a href="<?=base_url()?>index.php/data_kelas/editData/<?=$m->id?>" title="Ubah data"><img  src="<?=base_url()?>static/images/menu/update.png" align="absmiddle"/> Ubah</a> | <a href="<?=base_url()?>index.php/data_kelas/deleteData/<?=$m->id?>" title="Delete data" onClick="return confirm('Data tersebut akan dihapus dari database ?')"><img  src="<?=base_url()?>static/images/menu/del.png" align="absmiddle"/> Hapus</a>			
+		  <td align="center" width="190px"><a href="<?=base_url()?>index.php/data_komunitas/naikKelas/<?=$m->kelas?>" title="Ubah data"><img  src="<?=base_url()?>static/images/menu/update.png" align="absmiddle"/> Ubah</a> </td>			
 	  </tr>
 		<?php endforeach; ?> 
 	

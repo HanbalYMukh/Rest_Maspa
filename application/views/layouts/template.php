@@ -13,6 +13,8 @@
 	<script type="text/javascript" src="<?php echo base_url();?>asset/js/jquery-ui-1.8.23.custom.min.js"></script>
 	<script src="<?php echo base_url();?>asset/js/typeface.js"></script>
     <script src="<?php echo base_url();?>asset/css/font/gentilis_font/gentilis_regular.typeface.js"></script>
+	<script src="<?php echo base_url();?>asset/js/baloon.js"></script>
+
 	<script>
 	$(function() {
 		// Hover states on the static widgets
@@ -25,6 +27,20 @@
 			}
 		);
 	});
+	$(function() {
+		$('.ui-balloon').balloon( {
+			tipSize: 9,
+			  css: {
+				border: 'solid 2px rgba(234,227,32,.546)',
+				padding: '4px', 
+				fontSize: '10px',
+				fontWeight: 'bold',
+				lineHeight: '1.3',
+				backgroundColor: 'rgba(140,179,33,.270)',
+				color: '#07355b'
+			  }
+		});
+	});
 	</script>
 </head>
 <body>
@@ -35,8 +51,8 @@
 			<a href="<? echo base_url();?>">Home</a>
 		</div>
 		<div id="logo">
-		</div>
-		<div id="right-head"> Welcome <?php echo $this->session->userdata('nama');?>, <?php echo anchor('home/logout','Logout');?></div>
+		</div>		
+		<div id="right-head">  --> Welcome <?php echo $this->session->userdata('nama');?></div><div class =" right ui-state-default ui-corner-all" title="Logout"><?php echo anchor('home/logout','<span class="ui-icon ui-icon-locked"></span>');?></div>
 		</div>
 	</div>
 	<div class="space"></div>
@@ -53,7 +69,7 @@
 			<?php
 			foreach($menusatu->result() as $row)
 				{
-				echo '<li class="ui-state-default ui-corner-all" title="'.$row->menu_nama.'">'.anchor($row->menu_uri,'<span class="ui-icon '.$row->icon.'"></span>').'</li>';
+				echo '<li class="ui-state-default ui-corner-all ui-balloon" title="'.$row->menu_nama.'">'.anchor($row->menu_uri,'<span class="ui-icon '.$row->icon.'"></span>').'</li>';
 				}
 			?>
 			</ul>
@@ -63,7 +79,7 @@
 			<?php
 			foreach($menudua->result() as $row)
 				{
-				echo '<li class="ui-state-default ui-corner-all" title="'.$row->menu_nama.'">'.anchor($row->menu_uri,'<span class="ui-icon '.$row->icon.'"></span>').'</li>';
+				echo '<li class="ui-state-default ui-corner-all ui-balloon" title="'.$row->menu_nama.'">'.anchor($row->menu_uri,'<span class="ui-icon '.$row->icon.'"></span>').'</li>';
 				}
 			?>
 			</ul>
@@ -73,7 +89,7 @@
 			<?php
 			foreach($menutiga->result() as $row)
 				{
-				echo '<li class="ui-state-default ui-corner-all" title="'.$row->menu_nama.'">'.anchor($row->menu_uri,'<span class="ui-icon '.$row->icon.'"></span>').'</li>';
+				echo '<li class="ui-state-default ui-corner-all ui-balloon" title="'.$row->menu_nama.'">'.anchor($row->menu_uri,'<span class="ui-icon '.$row->icon.'"></span>').'</li>';
 				}
 			?>
 			</ul>
@@ -83,7 +99,7 @@
 			<?php
 			foreach($menuempat->result() as $row)
 				{
-				echo '<li class="ui-state-default ui-corner-all" title="'.$row->menu_nama.'">'.anchor($row->menu_uri,'<span class="ui-icon '.$row->icon.'"></span>').'</li>';
+				echo '<li class="ui-state-default ui-corner-all ui-balloon" title="'.$row->menu_nama.'">'.anchor($row->menu_uri,'<span class="ui-icon '.$row->icon.'"></span>').'</li>';
 				}
 			?>
 			</ul>
