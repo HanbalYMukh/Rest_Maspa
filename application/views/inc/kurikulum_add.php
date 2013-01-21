@@ -21,7 +21,7 @@
               <?php
 				for($k=0;$k<count($id_kelas);$k++)
 				{
-					echo "<option value='$no_ruang[$k]'>$no_ruang[$k]</option>";
+					echo "<option value='$id_kelas[$k]'>$no_ruang[$k]</option>";
 				}
 				?>
             </select>

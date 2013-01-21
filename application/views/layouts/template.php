@@ -6,11 +6,10 @@
 	<link type="text/css" href="<?php echo base_url();?>asset/css/jquery.ui.all.css" rel="stylesheet" />
 	<link href="<?php echo base_url();?>asset/css/style.css" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="<?php echo base_url();?>asset/css/demos.css">
+	<link rel="stylesheet" href="<?php echo base_url();?>asset/css/tables.css">
 	<link href="<?php echo base_url();?>asset/css/jquery-ui-1.9.0.custom.css" rel="stylesheet">
 	<script src="<?php echo base_url();?>asset/js/jquery-1.8.2.js"></script>
 	<script src="<?php echo base_url();?>asset/js/jquery-ui-1.9.0.custom.js"></script>
-	<script type="text/javascript" src="<?php echo base_url();?>asset/js/jquery-1.8.0.min.js"></script>
-	<script type="text/javascript" src="<?php echo base_url();?>asset/js/jquery-ui-1.8.23.custom.min.js"></script>
 	<script src="<?php echo base_url();?>asset/js/typeface.js"></script>
     <script src="<?php echo base_url();?>asset/css/font/gentilis_font/gentilis_regular.typeface.js"></script>
 	<script src="<?php echo base_url();?>asset/js/baloon.js"></script>
@@ -29,19 +28,20 @@
 	});
 	$(function() {
 		$('.ui-balloon').balloon( {
-			tipSize: 9,
+			tipSize: 11,
 			  css: {
-				border: 'solid 2px rgba(234,227,32,.546)',
-				padding: '4px', 
-				fontSize: '10px',
+				border: 'solid 1px rgba(234,227,32,.4)',
+				padding: '5px', 
+				fontSize: '11px',
 				fontWeight: 'bold',
 				lineHeight: '1.3',
-				backgroundColor: 'rgba(140,179,33,.270)',
+				backgroundColor: 'rgba(203,121,108,.4)',
 				color: '#07355b'
 			  }
 		});
 	});
 	</script>
+	<title> REST . Maspa </title>
 </head>
 <body>
 <div id="site-container">
@@ -69,7 +69,7 @@
 			<?php
 			foreach($menusatu->result() as $row)
 				{
-				echo '<li class="ui-state-default ui-corner-all ui-balloon" title="'.$row->menu_nama.'">'.anchor($row->menu_uri,'<span class="ui-icon '.$row->icon.'"></span>').'</li>';
+				echo '<li class="ui-state-default ui-corner-all">'.anchor($row->menu_uri,'<span class="ui-balloon ui-icon '.$row->icon.'" title="'.$row->menu_nama.'"></span>').'</li>';
 				}
 			?>
 			</ul>
@@ -79,7 +79,7 @@
 			<?php
 			foreach($menudua->result() as $row)
 				{
-				echo '<li class="ui-state-default ui-corner-all ui-balloon" title="'.$row->menu_nama.'">'.anchor($row->menu_uri,'<span class="ui-icon '.$row->icon.'"></span>').'</li>';
+				echo '<li class="ui-state-default ui-corner-all">'.anchor($row->menu_uri,'<span class="ui-icon '.$row->icon.' ui-balloon" title="'.$row->menu_nama.'"></span>').'</li>';
 				}
 			?>
 			</ul>
@@ -89,7 +89,7 @@
 			<?php
 			foreach($menutiga->result() as $row)
 				{
-				echo '<li class="ui-state-default ui-corner-all ui-balloon" title="'.$row->menu_nama.'">'.anchor($row->menu_uri,'<span class="ui-icon '.$row->icon.'"></span>').'</li>';
+				echo '<li class="ui-state-default ui-corner-all">'.anchor($row->menu_uri,'<span class="ui-icon '.$row->icon.' ui-balloon" title="'.$row->menu_nama.'"></span>').'</li>';
 				}
 			?>
 			</ul>
@@ -99,14 +99,21 @@
 			<?php
 			foreach($menuempat->result() as $row)
 				{
-				echo '<li class="ui-state-default ui-corner-all ui-balloon" title="'.$row->menu_nama.'">'.anchor($row->menu_uri,'<span class="ui-icon '.$row->icon.'"></span>').'</li>';
+				echo '<li class="ui-state-default ui-corner-all">'.anchor($row->menu_uri,'<span class="ui-icon '.$row->icon.' ui-balloon" title="'.$row->menu_nama.'"></span>').'</li>';
 				}
 			?>
 			</ul>
 		</div>
 	</div>
+	<div class="space"></div>
 	<div id="content" class="typeface-js"><?php echo $template['body']; ?></div>
-	<div id="footer">Tetap sengat, jangan mau kalah . keep Focuss</div>
+	<div id="footer">
+	<div id="top-footer">
+		<div class="contain"> 
+			<h4 class='logo'></h4>
+		</div>
+	</div>
+	</div>
 </div>
 </body>
 </html>

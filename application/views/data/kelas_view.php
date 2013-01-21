@@ -10,7 +10,7 @@ function cari()
 
 
 <div id="header_data" align="center">
-		<table width="100%" border="0" cellpadding="0" cellspacing="0" id="tbl_header">
+		<table width="100%" border="0" cellpadding="0" cellspacing="0" class="no-style">
 		<tr>
 		  <td align="left" width="60%">&nbsp;<a href="<?=base_url()?>index.php/data_sarana_kelas"  title="Kembali ke menu utama" ><img  src="<?=base_url()?>static/images/menu/back.png" align="absmiddle"/><font size="2"> Kembali</font></a></td>
 		  <td align="right" width="40%" ><font size="2">Pencarian Kelas </font>
@@ -26,14 +26,12 @@ function cari()
 
 <!-- grid -->
 
-<table width="90%" border="0" cellpadding="1" cellspacing="1" id="tbl_data" align="center">
-<td align="left" style="width:75%" ><img  src="<?=base_url()?>static/images/menu/add.png" align="absmiddle"/><?php echo anchor('data_kelas/addData', 'Tambah data'); ?></td>
+<table class="datatable"><td align="left" style="width:75%" ><img  src="<?=base_url()?>static/images/menu/add.png" align="absmiddle"/><?php echo anchor('data_kelas/addData', 'Tambah data'); ?></td>
 <td align="right" style="width:75%" >Jumlah Data : <b><?=$jumlah_data?></b></td>
 </table>
-<table width="90%" border="0" cellpadding="1" cellspacing="1" id="tbl_data" align="center">
-    <thead>
+<table class="datatable">    <thead>
         <tr  class="tr_head" align="center">
-            <th width="5%">No</th>
+            <th width="2%">No</th>
             <th>Id Kelas </th>
 			<th>Nama Kelas</th>
             <th>Luas Lantai</th>
@@ -58,8 +56,7 @@ function cari()
 	
     </tbody>
 </table>
-<table width="90%" border="0" cellpadding="1" cellspacing="1" id="tbl_data" align="center">
-  <tr>
+<table class="datatable">  <tr>
     <td align="left" style="width:75%" ><?php echo $pagination; ?></td>
     <td align="right" style="width:75%" ><img  src="<?=base_url()?>static/images/menu/next.png" align="absmiddle"/><?php echo anchor('data_kelas/', 'Reload Data'); ?></td>
   </tr>

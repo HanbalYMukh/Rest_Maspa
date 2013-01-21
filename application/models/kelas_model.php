@@ -51,5 +51,11 @@ class Kelas_model extends CI_Model {
 		$this->db->like('no_ruang',$key);
 		return $this->db->get($this->tbl);
 	}
-	
+	function selectNama()
+	{	
+		$kelas = $_POST['kelas'];
+		$query = mysql_query ("SELECT id_kelas,no_ruang FROM tkelas WHERE id_kelas='$kelas'");
+		$hasil = mysql_fetch_array ($query);
+		return $hasil;
+	}
 }

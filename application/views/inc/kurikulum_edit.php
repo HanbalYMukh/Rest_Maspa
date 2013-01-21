@@ -1,4 +1,5 @@
 <link href="<?php echo base_url().'static/css/form2.css'; ?>" rel="stylesheet"/>
+<?php echo validation_errors(); ?>
 <form action="" method="post">
     <table border="0" cellpadding="1" cellspacing="1" id="tbl_layout" align="center" width="50%">
     	<tr class="tr_head" align="center">
@@ -19,10 +20,10 @@
               <?php
 				for($k=0;$k<count($id_kelas);$k++)
 				{
-					echo "<option value='$no_ruang[$k]'>$no_ruang[$k]</option>";
+					echo "<option value='$id_kelas[$k]'>$no_ruang[$k]</option>";
 				}
 				?>
-            </select>
+            </select> * Pilih Kelas
 		  </td>
 		</tr>
 		        <tr class="tr_data">
@@ -35,7 +36,7 @@
 					echo "<option value='$nuptk[$i]'>$nama_ptk[$i]</option>";
 				}
 				?>
-            </select></td>
+            </select> * Pilih Guru Pengampu
         </tr>
 
 		<tr class="tr_data">

@@ -79,7 +79,7 @@
 <a href="<?=base_url()?>index.php/c_sarana"  title="Kembali ke menu utama" ><img  src="<?=base_url()?>static/images/menu/back.png" align="absmiddle"/><font size="2"> Kembali</font></a><br>
 <div id="data_tabel">
 <form name="frm" method="post" action="<?=base_url();?>index.php/data_sarana_kelas/tambah">
-<table width="90%" border="0" cellpadding="1" cellspacing="1" align="center">
+<table class="no-style" width="100%" border="0" cellpadding="1" cellspacing="1" align="center">
 
 <tr><td align="center"><font size="+1">MASTER KELAS / SARANA KELAS</font></td></tr>
 </table>
@@ -115,12 +115,12 @@
 				  <img  src="<?=base_url()?>static/images/menu/add.png" align="absmiddle"/>
 					 	<input type="button" class="button" onClick="location='<?=base_url();?>index.php/data_sarana_kelas/tambah/<?=$kelas?>'" value="Tambah"></td>
     	        </tr>
-				<tr class="tr_head">
+				<thead">
 					
-					<td align="Center">Jenis Sarana</td>
-					<td align="Center" width="20%">Jumlah Sarana</td>
-					<td align="Center" width="150px">Aksi</td>
-				</tr>
+					<th align="Center">Jenis Sarana</th>
+					<th align="Center" width="20%">Jumlah Sarana</th>
+					<th align="Center" width="150px">Aksi</th>
+				</thead>
 
 <?php
 	$bgcolor = '#DCF0D9';

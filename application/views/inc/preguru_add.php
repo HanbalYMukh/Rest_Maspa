@@ -46,8 +46,8 @@
           <td>
 			<select name="semester" class="text_box">
               <option value="">-- Pilih --</option>
-			  <option value="1">Satu</option>
-			  <option value="2">Dua</option>
+			  <option value="Ganjil">Ganjil</option>
+			  <option value="Genap">Genap</option>
 			</select>
 		  </td>
 		 </tr>
@@ -73,7 +73,7 @@
               <?php
 				for($k=0;$k<count($id_kelas);$k++)
 				{
-					echo "<option value='$no_ruang[$k]'>$no_ruang[$k]</option>";
+					echo "<option value='$id_kelas[$k]'>$no_ruang[$k]</option>";
 				}
 				?>
             </select>

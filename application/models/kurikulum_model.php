@@ -17,7 +17,7 @@ class Kurikulum_model extends CI_Model {
   	}
 	function get_relasi_data($limit = '10', $offset = '0'){
 		if($offset==""){ $offset=0; }
-		$query = $this->db->query("SELECT a.*,b.nama_ptk FROM kurikulum a,ptk b WHERE a.guru=b.nuptk ORDER BY a.id_pelajaran DESC LIMIT $offset,$limit");
+		$query = $this->db->query("SELECT a.*,b.nama_ptk,c.no_ruang FROM kurikulum a,ptk b, tkelas c WHERE a.guru=b.nuptk and a.kelas=c.id_kelas ORDER BY a.id_pelajaran DESC LIMIT $offset,$limit");
 		return $query->result();
 	}
 	function selectPelajaran()
@@ -48,6 +48,11 @@ class Kurikulum_model extends CI_Model {
 	function update($id)
 	{
 		$this->db->where('id_pelajaran', $id)->update($this->tbl, $_POST);
+	}
+	function selectLike($kelas)
+	{
+		$this->db->where('kelas',$kelas);	
+		return $this->db->get($this->tbl)->result();
 	}
 	
 	function search($key)

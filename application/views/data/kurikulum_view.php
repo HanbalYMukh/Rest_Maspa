@@ -12,7 +12,7 @@ function cari()
 <div id="conten">
 
 <div id="header_data" align="center">
-		<table width="100%" border="0" cellpadding="0" cellspacing="0" id="tbl_header">
+		<table width="100%" border="0" cellpadding="0" cellspacing="0" class="no-style">
 		<tr>
 		  <td align="left" width="60%">&nbsp;<a href="<?=base_url()?>index.php/c_kurikulum"  title="Kembali ke menu utama" ><img  src="<?=base_url()?>static/images/menu/back.png" align="absmiddle"/><font size="2"> Kembali</font></a></td>
 		  <td align="right" width="40%" ><font size="2">Pencarian data </font>
@@ -28,16 +28,14 @@ function cari()
 
 <!-- grid -->
 <div id="data_tabel">
-<table width="90%" border="0" cellpadding="1" cellspacing="1" id="tbl_data" align="center">
-<td align="left" style="width:75%" ><img  src="<?=base_url()?>static/images/menu/add.png" align="absmiddle"/><?php echo anchor('data_kurikulum/addData', 'Tambah data'); ?></td>
+<table class="datatable"><td align="left" style="width:75%" ><img  src="<?=base_url()?>static/images/menu/add.png" align="absmiddle"/><?php echo anchor('data_kurikulum/addData', 'Tambah data'); ?></td>
 <td align="right" style="width:75%" >Jumlah Data : <b><?=$jumlah_data?></b></td>
 </table>
-<table width="90%" border="0" cellpadding="1" cellspacing="1" id="tbl_data" align="center">
-    <thead>
+<table class="datatable">    <thead>
         <tr  class="tr_head" align="center">
-            <th width="5%">No</th>
+            <th width="2%">No</th>
             <th>Kode</th>
-			<th>Mata Pelajaran</th>
+			<th width="18%">Mata Pelajaran</th>
 			<th>Kelas</th>
 			<th>Guru Pengampu</th>
 			<th>KKM</th>
@@ -54,7 +52,7 @@ function cari()
 			<td ><?php echo $i++; ?></td>
 			<td align='left'>&nbsp;<?= $m->id_pelajaran; ?></td>
 			<td align='left'>&nbsp;<?= $m->nama_pelajaran; ?></td>
-			<td align='left'>&nbsp;<?= $m->kelas; ?></td>
+			<td align='left'>&nbsp;<?= $m->no_ruang; ?></td>
 			<td align='left'>&nbsp;<?= $m->nama_ptk; ?></td>
 			<td align='left'>&nbsp;<?= $m->kkm; ?></td>
 			<td align='left'>&nbsp;<?= $m->kelompok; ?></td>
@@ -64,8 +62,7 @@ function cari()
 	
     </tbody>
 </table>
-<table width="90%" border="0" cellpadding="1" cellspacing="1" id="tbl_data" align="center">
-  <tr>
+<table class="datatable">  <tr>
     <td align="left" style="width:75%" ><?php echo $pagination; ?></td>
     <td align="right" style="width:75%" ><img  src="<?=base_url()?>static/images/menu/next.png" align="absmiddle"/><?php echo anchor('data_kurikulum/', 'Reload Data'); ?></td>
   </tr>

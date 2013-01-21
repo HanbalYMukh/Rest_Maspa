@@ -1,7 +1,6 @@
-<table width="90%" border="0" cellpadding="1" cellspacing="1" id="tbl_data" align="center">
-    <thead>
+<table class="datatable">    <thead>
         <tr  class="tr_head" align="center">
-            <th width="5%">No</th>
+            <th width="2%">No</th>
             <th> Kelas </th>
 			<th> Jumlah Siswa </th>
 			<th width="150px">Aksi</th>

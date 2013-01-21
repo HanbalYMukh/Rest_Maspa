@@ -62,7 +62,8 @@ class Data_kurikulum extends MY_Controller {
 		$this->form_validation->set_rules('kelas', 'kelas', 'trim|required|xss_clean');
 		$this->form_validation->set_rules('guru','Guru Pengampu', 'trim|required|xss_clean');
 		$this->form_validation->set_rules('kelompok', 'Kelompok', 'trim|required|xss_clean');
-				
+		
+		$this->form_validation->set_message('required', ' %s tidak boleh kosong !!');			
 		if ($this->form_validation->run() == FALSE)
 		{
 			$this->template->build('inc/kurikulum_add',$data);
@@ -80,6 +81,7 @@ class Data_kurikulum extends MY_Controller {
 	
 	function editData($id)
 	{
+		$this->load->library(array('simpliparse','validation','pquery'));
 		if($_POST==NULL)
 		{
 			$kelas = $this->kelas_model->selectData();
@@ -98,8 +100,29 @@ class Data_kurikulum extends MY_Controller {
 			$this->template->build('inc/kurikulum_edit', $data);
 		
 		}else {
-			$this->kurikulum_model->update($id);
+			$this->form_validation->set_rules('kelas', 'Form Kelas', 'trim|required|xss_clean');
+			$this->form_validation->set_rules('guru', 'Form Guru', 'trim|required|xss_clean');
+			$this->form_validation->set_message('required', ' %s tidak boleh kosong !!');	
+			if ($this->form_validation->run() == FALSE)
+			{
+				$kelas = $this->kelas_model->selectData();
+		foreach ($kelas as $m)
+		{
+			$data['id_kelas'][]		= $m->id_kelas;
+			$data['no_ruang'][]		= $m->no_ruang;
+		}
+		$nama = $this->ptk_model->selectNama();
+		foreach ($nama as $m)
+		{
+			$data['nuptk'][] 	= $m->nuptk;
+			$data['nama_ptk'][]	= $m->nama_ptk;
+		}
+			$data['m'] = $this->kurikulum_model->select($id);
+				$this->template->build('inc/kurikulum_edit', $data);
+			}
+			else {$this->kurikulum_model->update($id);
 			redirect('data_kurikulum');
+			}
 		}
 		
 	}

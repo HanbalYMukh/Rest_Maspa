@@ -53,17 +53,24 @@ class Data_komunitas extends MY_Controller {
 	
 	function naikKelas($kelas)
 	{	
-		
 		$data ['kelas']=$this->kelas_model->selectData();
 		$data['konten'] = $this->komunitas_model->selectKelas($kelas);
 		$this->template->build('inc/naik_kelas', $data);		
 	}
 	function naik(){
-		$kelas=trim($this->input->post('kelas'));
-		$id=trim($this->input->post('id'));
-		$data ['coba']= $kelas;
-		$this->template->build('inc/naik', $data);
+		$gagal='gagal';
+		if (isset($_POST['id'])){
+			$this->komunitas_model->edit();
+			$data = $this->kelas_model->selectNama();
+			echo json_encode($data);
+		} else {
+			$message ='gagal total';
+			$data = array ('kelas'=> $message);
+			echo json_encode($data);
+		}
+		
 	}
+
 	
 	function searchData($key)
 	{

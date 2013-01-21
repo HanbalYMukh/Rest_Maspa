@@ -20,7 +20,10 @@ class Siswa_model extends CI_Model {
 	{
 		return $this->db->query("SELECT no_induk, nama_siswa FROM siswa ")->result();
 	}
-	
+	function selectBiodata($nis){
+		$this->db->where('no_induk',$nis);
+		return $this->db->get($this->tbl);
+	}
 	function countData() 
 	{   
 	  	return $this->db->count_all($this->tbl);

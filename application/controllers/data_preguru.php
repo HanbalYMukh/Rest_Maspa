@@ -149,7 +149,7 @@ class Data_preguru extends MY_Controller {
 	function deleteData($id)
 	{
 		$this->preguru_model->delete($id);
-		redirect('data_pregur/index');
+		redirect('data_preguru/index');
 	}
 	
 	function editData($id)
